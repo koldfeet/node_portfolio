@@ -8,7 +8,7 @@ app.set("views", path.join(__dirname, "/views"))
 app.use(express.static(path.join(__dirname, "public")))
 
 app.get("/", (req, res) => {
-    res.render("testing.ejs")
+    res.render("home.ejs")
 })
 
 app.listen(PORT, () => {
