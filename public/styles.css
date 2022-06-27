@@ -253,120 +253,79 @@
 
 /* ========= RIght Colume END========= */
 
-/* ============ project cards start =========== */
-
-:root {
-    --primary: #ffce00;
-    --secondary: #fe4880;
-    --dark: #212121;
-    --light: #f3f3f3;
+/* =============== Project section Start =====================*/
+#project-cards {
+    min-width: 200px;
 }
 
-.card {
-    margin: 10px auto 0;
-    width: 300px;
-    height: 530px;
-    perspective: 1000px;
-}
-
-.card__inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    position: relative;
-}
-
-.card__inner.is-flipped {
-    transform: rotateY(180deg);
-}
-
-.card__face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
-}
-
-.card__face--font {
-    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card__face--font h2 {
-    color: #fff;
-    font-size: 32px;
-}
-
-.card__face--back {
-    background-color: var(--light);
-    transform: rotateY(180deg);
-}
-
-.card__content {
-    width: 100%;
-    height: 100%;
-}
-
-.card__header {
-    position: relative;
-    padding: 10px;
-}
-
-.card__header:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    border-radius: 0 0 50% 0;
-    /* background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%); */
-}
-
-.pp {
-    display: block;
-    width: 128px;
-    height: 128px;
-    margin: 0 auto 30px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 5px solid rgb(255, 118, 38);
-    object-fit: cover;
-}
-
-/* background: rgb(255, 118, 38); */
-.card__header h2 {
-    color: rgb(255, 118, 38);
-    font: 32px;
-    font-weight: 900;
-    text-transform: uppercase;
+.project-title {
     text-align: center;
 }
 
-.card__body {
-    padding: 5px;
+.card-title {
+    text-align: center;
 }
 
-.card__body h3 {
-    color: var(--dark);
-    font-size: 24px;
+.card-para {
+    margin: 5px;
+    text-align: left;
+}
+
+.squareItem {
+    margin-top: 30px;
+    position: relative;
+}
+
+.squareInnerContainer {
+    position: relative;
+    padding: 50px 1px 35px;
+    text-align: center;
+    border: 2px solid #444;
+    border-top: none;
+    height: 500px;
+
+}
+
+.squareInnerContainer:before,
+.squareInnerContainer:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    width: 30%;
+    border-bottom: 2px solid #444;
+
+}
+
+.squareInnerContainer:before {
+    right: 0px;
+}
+
+.squareInnerContainer:after {
+    left: 0px;
+}
+
+.squareContent h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: rgb(255, 118, 38);
+}
+
+.squareContent h3 {
+    font-size: 13px;
     font-weight: 600;
-    /* margin-bottom: 15px; */
+    margin: 0;
 }
 
-.card_body p {
-    color: var(--dark);
-    line-height: 1.5px;
+.squareIcon {
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    width: 40%;
+    height: 60px;
+    font-size: 45px;
+    margin-left: -20%;
+    counter-reset: #444;
 }
 
-/* ============ project cards end =========== */
+/* ==================== Project section END ==================== */
