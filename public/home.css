@@ -4,19 +4,19 @@
     box-sizing: border-box;
 }
 
-/* .about-me {
-    margin-top: 50px;
-} */
+.about-me {
+    margin: 15px;
+}
 
 /* ============= sliding nav menu Start ============ */
 /* hamburger menu with sidebar start */
 #toggle {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 5px;
     width: 60px;
     height: 60px;
-    background: rgb(255, 118, 38);
+    /* background: rgb(255, 118, 38); */
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -29,7 +29,7 @@
     position: absolute;
     width: 28px;
     height: 2px;
-    background: rgb(95, 95, 95);
+    background: rgba(255, 118, 38, 0.781);
     transform: translateY(-5px);
     transition: 0.2s;
 }
@@ -39,7 +39,8 @@
     position: absolute;
     width: 28px;
     height: 2px;
-    background: rgb(95, 95, 95);
+    /* background: rgb(95, 95, 95); */
+    background: rgba(255, 118, 38, 0.781);
     transform: translateY(5px);
     transition: 0.2s;
 }
