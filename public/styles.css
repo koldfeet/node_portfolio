@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .about-me {
+    margin-top: 50px;
+} */
+
+/* ============= sliding nav menu Start ============ */
+/* hamburger menu with sidebar start */
+#toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: rgb(255, 118, 38);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+#toggle::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: rgb(95, 95, 95);
+    transform: translateY(-5px);
+    transition: 0.2s;
+}
+
+#toggle::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: rgb(95, 95, 95);
+    transform: translateY(5px);
+    transition: 0.2s;
+}
+
+#toggle.active::before {
+    transform: translateY(0px);
+    transform: rotate(45deg);
+}
+
+#toggle.active::after {
+    transform: translateY(0px);
+    transform: rotate(-45deg);
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: rgba(255, 118, 38, 0.781);
+    transition: 0.5s;
+    z-index: 2;
+}
+
+#sidebar.active {
+    left: 0px;
+}
+
+.sidebar-link:hover {
+    text-decoration: none;
+}
+
+/* sidebar nav start */
+.sidebar-link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+#sidebar ul {
+    position: relative;
+    margin-top: 50px;
+}
+
+#sidebar ul li {
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.contact-info-sidebar {
+    position: absolute;
+    top: 300px;
+    margin-left: 10px;
+}
+
+/* ============ sliding nav menu END ================ */
+
+.center-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ========Left Colums Start */
+.col-left {
+    background-color: rgb(66, 66, 66);
+    min-width: 300px;
+}
+
+.col-right {
+    background-color: rgb(255, 255, 255);
+    flex-basis: 30%;
+    border-top: 15px solid rgb(255, 118, 38);
+    min-width: 300px;
+}
+
+.profile-img-style {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.h1-style {
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.h1 {
+    color: #fff;
+    font-size: 30px;
+}
+
+.custom-line {
+    width: 50%;
+}
+
+.h2-style {
+    text-align: center;
+    color: #fff;
+}
+
+.h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.h3 {
+    color: #fff;
+    padding-bottom: 5px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.bi {
+    margin: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.contact-info-style {
+    font-weight: bold;
+    color: #fff;
+}
+
+.achor-style {
+    color: #fff;
+    text-decoration: none;
+}
+
+.achor-style:hover {
+    text-decoration: none;
+}
+
+.h4 {
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.education-p {
+    font-size: 13px;
+    color: #fff;
+    text-indent: 15px;
+}
+
+.skills-li {
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 20px;
+}
+
+.ref-job-title {
+    color: #fff;
+    font-size: 12px;
+}
+
+.ref-phone {
+    color: #fff;
+    font-size: 12px;
+}
+
+/* ========Left Colums END */
+
+/* ========= RIght Colume START========= */
+.div-h3 {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.col-right-h5 {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.col-right-h6 {
+    font-weight: bold;
+    color: gray;
+}
+
+.col-right-p {
+    text-indent: 40px;
+    font-size: 15px;
+    margin: 20px;
+}
+
+.summary-points {
+    color: gray;
+    margin: 20px;
+}
+
+.h7 {
+    font-weight: bold;
+}
+
+/* ========= RIght Colume END========= */
