@@ -15,6 +15,10 @@ app.get("/projects", (req, res) => {
     res.render("projects.ejs")
 })
 
+app.get("/gallery", (req, res) => {
+    res.render("gallery.ejs")
+})
+
 app.listen(PORT, () => {
     console.log(`Server is listenning on PORT: ${PORT}`)
 })
