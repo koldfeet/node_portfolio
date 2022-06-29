@@ -43,7 +43,39 @@
         </div>
     </div>
 
-    <h1>Testing Gallery</h1>
+    <!-- =================Gallery section Start================== -->
+    <section id="target_gallery" class="gallery">
+        <div class="container gallery_container">
+            <div class="row">
+                <div class="gallery_h1_wrapper">
+                    <h1 class="gallery_h1">Gallery</h1>
+                </div>
+                <div class="col">
+
+                    <div class="full-img" id="fullImgBox">
+                        <img src="images/placement.jpg" id="fullImg">
+                        <span onclick="closeFullImg()">X</span>
+                    </div>
+                    <div class="img-gallery">
+                        <img class="gallery_img" src="https://source.unsplash.com/300x300?river"
+                            onclick="openFullImg(this.src)" alt="">
+                        <img class="gallery_img" src="https://source.unsplash.com/300x300?trees"
+                            onclick="openFullImg(this.src)" alt="">
+                        <img class="gallery_img" src="https://source.unsplash.com/300x300?city"
+                            onclick="openFullImg(this.src)" alt="">
+                        <img class="gallery_img" src="https://source.unsplash.com/300x300?mountain"
+                            onclick="openFullImg(this.src)" alt="">
+                        <img class="gallery_img" src="https://source.unsplash.com/300x300?bikes"
+                            onclick="openFullImg(this.src)" alt="">
+                        <img class="gallery_img" src="https://source.unsplash.com/300x300?skateboard"
+                            onclick="openFullImg(this.src)" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =================Gallery section End================== -->
 
 
     <script src="/app.js"></script>
