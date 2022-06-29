@@ -11,9 +11,9 @@
     --light: #f3f3f3;
 }
 
-/* .about-me {
-    margin-top: 50px;
-} */
+.about-me {
+    margin-top: 10px;
+}
 
 /* ============= sliding nav menu Start ============ */
 /* hamburger menu with sidebar start */
@@ -120,6 +120,7 @@
 .col-left {
     background-color: rgb(66, 66, 66);
     min-width: 300px;
+    padding: 20px;
 }
 
 .col-right {
@@ -127,6 +128,7 @@
     flex-basis: 30%;
     border-top: 15px solid rgb(255, 118, 38);
     min-width: 300px;
+    padding: 20px;
 }
 
 .profile-img-style {
