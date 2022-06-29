@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary: #ffce00;
+    --secondary: #fe4880;
+    --dark: #212121;
+    --light: #f3f3f3;
+}
+
 /* .about-me {
     margin-top: 50px;
 } */
@@ -16,7 +23,7 @@
     right: 20px;
     width: 60px;
     height: 60px;
-    background: rgb(255, 118, 38);
+    /* background: rgb(255, 118, 38); */
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -254,11 +261,6 @@
 
 /* =======project section start ============== */
 
-.projects {
-    margin: 50px;
-    border-top: 15px solid rgb(255, 118, 38);
-}
-
 .project-col {
     display: flex;
     justify-content: center;
@@ -390,15 +392,8 @@
 
 /* ============ project cards start =========== */
 
-:root {
-    --primary: #ffce00;
-    --secondary: #fe4880;
-    --dark: #212121;
-    --light: #f3f3f3;
-}
-
 .card {
-    margin: 10px auto 0;
+    margin: 10px;
     width: 300px;
     height: 530px;
     perspective: 1000px;
