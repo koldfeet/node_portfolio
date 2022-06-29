@@ -4,19 +4,19 @@
     box-sizing: border-box;
 }
 
-.about-me {
-    margin: 15px;
-}
+/* .about-me {
+    margin-top: 50px;
+} */
 
 /* ============= sliding nav menu Start ============ */
 /* hamburger menu with sidebar start */
 #toggle {
     position: fixed;
     top: 20px;
-    right: 5px;
+    right: 20px;
     width: 60px;
     height: 60px;
-    /* background: rgb(255, 118, 38); */
+    background: rgb(255, 118, 38);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -29,7 +29,7 @@
     position: absolute;
     width: 28px;
     height: 2px;
-    background: rgba(255, 118, 38, 0.781);
+    background: rgb(95, 95, 95);
     transform: translateY(-5px);
     transition: 0.2s;
 }
@@ -39,8 +39,7 @@
     position: absolute;
     width: 28px;
     height: 2px;
-    /* background: rgb(95, 95, 95); */
-    background: rgba(255, 118, 38, 0.781);
+    background: rgb(95, 95, 95);
     transform: translateY(5px);
     transition: 0.2s;
 }
@@ -253,110 +252,93 @@
 
 /* ========= RIght Colume END========= */
 
-/* =============== Project section Start =====================*/
-#project-cards {
-    min-width: 200px;
+/* =======project section start ============== */
+
+.projects {
+    margin: 50px;
+    border-top: 15px solid rgb(255, 118, 38);
+}
+
+.project-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
 }
 
 .project-title {
     text-align: center;
+    margin: 20px;
 }
 
-.card-title {
-    text-align: center;
-}
-
-.card-para {
-    margin: 5px;
-    text-align: left;
-}
-
-.squareItem {
-    margin-top: 30px;
-    position: relative;
-}
-
-.squareInnerContainer {
-    position: relative;
-    padding: 50px 1px 35px;
-    text-align: center;
-    border: 2px solid #444;
-    border-top: none;
-    height: 500px;
-
-}
-
-.squareInnerContainer:before,
-.squareInnerContainer:after {
-    content: '';
-    position: absolute;
-    top: 0px;
-    width: 30%;
-    border-bottom: 2px solid #444;
-
-}
-
-.squareInnerContainer:before {
-    right: 0px;
-}
-
-.squareInnerContainer:after {
-    left: 0px;
-}
-
-.squareContent h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    font-weight: 400;
+.project-title h1 {
     color: rgb(255, 118, 38);
 }
 
-.squareContent h3 {
-    font-size: 13px;
-    font-weight: 600;
-    margin: 0;
+.card {
+    height: 550px;
+    border: none;
 }
 
-.squareIcon {
-    position: absolute;
-    left: 50%;
-    top: -30px;
-    width: 40%;
-    height: 60px;
-    font-size: 45px;
-    margin-left: -20%;
-    counter-reset: #444;
-}
-
-/* ==================== Project section END ==================== */
-
-/* ================Gallery section start================ */
-.gallery_h1_wrapper {
+.card-body {
     text-align: center;
-    margin-top: 40px;
+    background-color: rgb(66, 66, 66);
+    color: white;
 }
 
-/* .gallery_h1 {
-    color:#fff;
-} */
-
-.gallery_img {
-    width: 200px;
-    height: 250px;
-    box-shadow: 5px 5px 15px rgb(58, 58, 58);
+.card-text {
+    text-align: left;
 }
 
+.btn {
+    background-color: rgb(255, 118, 38);
+    border: none;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btn:hover {
+    background-color: rgb(66, 66, 66);
+}
+
+.btn-live {
+    position: absolute;
+    top: 470px;
+    left: 30px;
+}
+
+.btn-git {
+    position: absolute;
+    top: 470px;
+    right: 30px;
+}
+
+/* =======project section end ============= */
+
+/* =============contact section Start */
+.contact-section {
+    color: #fff;
+    margin: 20px;
+    border-top: 15px solid rgb(255, 118, 38);
+    background-color: rgb(66, 66, 66);
+}
+
+.contact-h2 {
+    text-align: center;
+}
+
+/* ==========contact section END */
+
+/* ============ images gallery Start =========== */
 .gallery {
-    margin-top: 45px;
-}
-
-.gallery_container {
-    background-color: rgba(163, 135, 97, 0.137);
+    /* margin: 50px; */
+    border-top: 15px solid rgb(255, 118, 38);
 }
 
 .img-gallery {
     width: 80%;
-    margin: 45px auto 50px;
+    margin: 20px auto 50px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 30px;
@@ -365,14 +347,17 @@
 .img-gallery img {
     width: 100%;
     cursor: pointer;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+    transition: transform .2s;
 }
 
-.img-gallery img:hover {
-    /* transform: scale(0.8) rotate(-9deg); */
-    transform: scale(1.050);
-    /* border-radius: 20px; */
-    box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
-}
+/* .img-gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 3px 18px 3px rgba(0,0,0,0.2);
+    
+} */
+
+
 
 .full-img {
     width: 100%;
@@ -401,4 +386,122 @@
     cursor: pointer;
 }
 
-/* =================Gallery section end================ */
+/* ============ images gallery End =========== */
+
+/* ============ project cards start =========== */
+
+:root {
+    --primary: #ffce00;
+    --secondary: #fe4880;
+    --dark: #212121;
+    --light: #f3f3f3;
+}
+
+.card {
+    margin: 10px auto 0;
+    width: 300px;
+    height: 530px;
+    perspective: 1000px;
+}
+
+.card__inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card__inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__face--font {
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__face--font h2 {
+    color: #fff;
+    font-size: 32px;
+}
+
+.card__face--back {
+    background-color: var(--light);
+    transform: rotateY(180deg);
+}
+
+.card__content {
+    width: 100%;
+    height: 100%;
+}
+
+.card__header {
+    position: relative;
+    padding: 10px;
+}
+
+.card__header:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 0 0 50% 0;
+    /* background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%); */
+}
+
+.pp {
+    display: block;
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 5px solid rgb(255, 118, 38);
+    object-fit: cover;
+}
+
+/* background: rgb(255, 118, 38); */
+.card__header h2 {
+    color: rgb(255, 118, 38);
+    font: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card__body {
+    padding: 5px;
+}
+
+.card__body h3 {
+    color: var(--dark);
+    font-size: 24px;
+    font-weight: 600;
+    /* margin-bottom: 15px; */
+}
+
+.card_body p {
+    color: var(--dark);
+    line-height: 1.5px;
+}
+
+/* ============ project cards end =========== */
