@@ -43,3 +43,8 @@ for (let i = 0; i < cards.length; i++) {
     });
 }
 // ======= project section cards end ========
+
+// ======= Contact page START ==========
+
+
+// ======= Contact page end ==========
