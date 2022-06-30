@@ -262,12 +262,22 @@
 /* ========= RIght Colume END========= */
 
 /* =======project section start ============== */
+.testing {
+    margin: 15px;
+}
+
+
+.project_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .project-col {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 }
 
 .project-title {
