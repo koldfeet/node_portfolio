@@ -45,6 +45,15 @@ for (let i = 0; i < cards.length; i++) {
 // ======= project section cards end ========
 
 // ======= Contact page START ==========
+document.addEventListener("DOMContentLoaded", function () {
+    loadHTMLTable([])
+})
 
+function loadHTMLTable(data) {
+    const table = document.querySelector("table tbody")
+    if (data.length === 0) {
+        table.innerHTML = "<tr><td class='no-data' colspan = '7'> No Data </td></tr>"
+    }
+}
 
 // ======= Contact page end ==========
