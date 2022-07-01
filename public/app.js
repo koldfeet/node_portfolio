@@ -1,5 +1,8 @@
 // ======= sliding nav menu start ==========
 
+//might have to delete line below
+// const { response } = require("express");
+
 //hamburger menu toggle start
 const toggle = document.getElementById("toggle");
 const sidebar = document.getElementById("sidebar");
@@ -46,6 +49,9 @@ for (let i = 0; i < cards.length; i++) {
 
 // ======= Contact page START ==========
 document.addEventListener("DOMContentLoaded", function () {
+    fetch("http://localhost:5000/getAll")
+        .then(response => response.json())
+        .then(data => console.log(data))
     loadHTMLTable([])
 })
 
