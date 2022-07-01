@@ -6,7 +6,7 @@ const PORT = process.env.PORT
 const path = require("path")
 const mysql = require("mysql")
 const dbService = require("./dbService.js") //import dbService page
-const { response } = require("express")
+// const { response } = require("express")
 
 
 app.use(cors())
@@ -17,30 +17,30 @@ app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "/views"))
 app.use(express.static(path.join(__dirname, "public")))
 
-app.get("/", (req, res) => {
-    res.render("home.ejs")
+app.get("/", (request, response) => {
+    response.render("home.ejs")
 })
 
-app.get("/projects", (req, res) => {
-    res.render("projects.ejs")
+app.get("/projects", (request, response) => {
+    response.render("projects.ejs")
 })
 
-app.get("/gallery", (req, res) => {
-    res.render("gallery.ejs")
+app.get("/gallery", (request, response) => {
+    response.render("gallery.ejs")
 })
 
 // ======== contact routes START "CRUD" =========
-app.get("/contacts", (req, res) => {
-    res.render("contacts.ejs")
+app.get("/contacts", (request, response) => {
+    response.render("contacts.ejs")
 })
 
 //create
-app.post("/insert", (req, res) => {
-
+app.post("/insert", (request, response) => {
+    console.log(request.body)
 })
 
 //read
-app.get("/getAll", (req, res) => {
+app.get("/getAll", (request, response) => {
     const db = dbService.getDbServiceInstance()
 
     const result = db.getAllData()
