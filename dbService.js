@@ -3,10 +3,10 @@ const dotenv = require("dotenv").config()
 const instance = null;
 
 const connection = mysql.createConnection({
-    host: "",
-    user: "",
-    password: "",
-    database: "",
+    host: "localhost",
+    user: "root",
+    password: "2216colo",
+    database: "contact_info",
     port: 3306
 })
 
