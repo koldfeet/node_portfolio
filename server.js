@@ -1,13 +1,17 @@
 const express = require("express")
 const app = express()
-const dotenv = require("dotenv").config()
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 5000
 const path = require("path")
 const mysql = require("mysql")
+const ejs = require("ejs")
+const bodyParser = require("body-parser")
 
+require("dotenv").config()
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "/views"))
 app.use(express.static(path.join(__dirname, "public")))
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 app.get("/projects", (request, response, next) => {
     response.render("projects.ejs")
