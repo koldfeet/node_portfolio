@@ -9,8 +9,19 @@ const pool = mysql.createPool({
     database: process.env.DB_NAME
 })
 
+//rendering home page
 exports.home = (req, res) => {
     res.render("home.hbs")
+}
+
+//rendering gallery page
+exports.gallery = (req, res) => {
+    res.render("gallery.hbs")
+}
+
+//rendering project page
+exports.projects = (req, res) => {
+    res.render("projects.hbs")
 }
 
 // view user

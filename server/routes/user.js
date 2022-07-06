@@ -3,6 +3,8 @@ const router = express.Router()
 const userController = require("../controllers/userController")
 
 router.get("/", userController.home)
+router.get("/gallery", userController.gallery)
+router.get("/projects", userController.projects)
 
 //create, find, update, delete
 router.get("/contact", userController.view)
