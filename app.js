@@ -1,39 +1,46 @@
 const express = require("express")
-const app = express()
-const PORT = process.env.PORT || 5000
-const path = require("path")
 const mysql = require("mysql")
-const ejs = require("ejs")
 const bodyParser = require("body-parser")
+const exphbs = require("express-handlebars")
 
 require("dotenv").config()
-app.set("view engine", "ejs")
-app.set("views", path.join(__dirname, "/views"))
-app.use(express.static(path.join(__dirname, "public")))
+
+const app = express()
+const PORT = process.env.PORT || 5000
+
+//parsing middleware
+//parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
+
+//parse application/json
 app.use(bodyParser.json())
 
-app.get("/projects", (request, response, next) => {
-    response.render("projects.ejs")
+//static files
+app.use(express.static("public"))
+
+//templating engine
+app.engine("hbs", exphbs.engine({ extname: ".hbs" }))
+app.set("view engine", "hbs")
+
+//connection to db pool
+const pool = mysql.createPool({
+    connectionLimit: 100,
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME
 })
 
-app.get("/gallery", (request, response, next) => {
-    response.render("gallery.ejs")
+// connect to db
+pool.getConnection((err, connection) => {
+    if (err) throw err
+    console.log("Connected as ID " + connection.threadId)
 })
 
-app.get("/contacts", (request, response, next) => {
-    response.render("contacts.ejs")
-})
-
-app.get("/", (request, response, next) => {
-    response.render("home.ejs")
-})
-
-// ======= handle error for when page not found =========
-app.use((request, response, next) => {
-    response.status(404).send("<h1> Page not found </h1>")
-})
+//routes
+const routes = require("./server/routes/user")
+app.use("/", routes)
 
 app.listen(PORT, () => {
-    console.log(`Server is listenning on PORT: 5000`)
+    console.log(`Server is listenning on PORT: ${PORT}`)
 })
