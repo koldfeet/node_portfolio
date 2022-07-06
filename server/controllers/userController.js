@@ -1,13 +1,7 @@
 const mysql = require("mysql")
 
 //connection to db pool
-const pool = mysql.createPool({
-    connectionLimit: 100,
-    host: "localhost",
-    user: "root",
-    password: "2216colo",
-    database: "client_management"
-})
+
 
 //rendering home page
 exports.home = (req, res) => {

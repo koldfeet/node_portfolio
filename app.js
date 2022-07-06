@@ -21,13 +21,7 @@ app.engine("hbs", exphbs.engine({ extname: ".hbs" }))
 app.set("view engine", "hbs")
 
 //connection to db pool
-const pool = mysql.createPool({
-    connectionLimit: 100,
-    host: "localhost",
-    user: "root",
-    password: "2216colo",
-    database: "client_management"
-})
+
 
 // connect to db
 pool.getConnection((err, connection) => {

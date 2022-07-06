@@ -14,11 +14,10 @@
     </div>
 </div>
 
-
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th scope="col">#</th>
+            {{!-- <th scope="col">#</th> --}}
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">Email</th>
@@ -28,8 +27,8 @@
     <tbody>
         {{#each rows}}
         <tr>
-            <th scope="row">{{this.id}}</th>
-            <td>{{this.first_name}}</td>
+            {{!-- <th scope="row">{{this.id}}</th> --}}
+            <td scope="row">{{this.first_name}}</td>
             <td>{{this.last_name}}</td>
             <td>{{this.email}}</td>
             <td class="text-end">
