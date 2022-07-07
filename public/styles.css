@@ -517,9 +517,6 @@
 /* ============ project cards end =========== */
 
 /* ============== CONTACT SECTION START =========== */
-
-/* ============== CONTACT SECTION END =========== */
-
 main {
     width: 50%;
     margin: 50px auto;
@@ -541,3 +538,13 @@ th,
 td {
     padding: 5px;
 }
+
+.contact-nav {
+    display: flex;
+}
+
+.contact-nav-a {
+    margin-right: 20px;
+}
+
+/* ============== CONTACT SECTION END =========== */

@@ -2,7 +2,9 @@ const express = require("express")
 const mysql = require("mysql")
 const bodyParser = require("body-parser")
 const exphbs = require("express-handlebars")
+const dotenv = require("dotenv")
 
+require('dotenv').config()
 const app = express()
 const PORT = process.env.PORT || 5000
 
@@ -21,7 +23,13 @@ app.engine("hbs", exphbs.engine({ extname: ".hbs" }))
 app.set("view engine", "hbs")
 
 //connection to db pool
-
+const pool = mysql.createPool({
+    connectionLimit: 100,
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME
+})
 
 // connect to db
 pool.getConnection((err, connection) => {
