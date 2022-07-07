@@ -15,100 +15,6 @@
     margin-top: 10px;
 }
 
-/* ============= sliding nav menu Start ============ */
-/* hamburger menu with sidebar start */
-#toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    /* background: rgb(255, 118, 38); */
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-}
-
-#toggle::before {
-    content: "";
-    position: absolute;
-    width: 28px;
-    height: 2px;
-    background: rgb(95, 95, 95);
-    transform: translateY(-5px);
-    transition: 0.2s;
-}
-
-#toggle::after {
-    content: "";
-    position: absolute;
-    width: 28px;
-    height: 2px;
-    background: rgb(95, 95, 95);
-    transform: translateY(5px);
-    transition: 0.2s;
-}
-
-#toggle.active::before {
-    transform: translateY(0px);
-    transform: rotate(45deg);
-}
-
-#toggle.active::after {
-    transform: translateY(0px);
-    transform: rotate(-45deg);
-}
-
-#sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100vh;
-    background: rgba(255, 118, 38, 0.781);
-    transition: 0.5s;
-    z-index: 2;
-}
-
-#sidebar.active {
-    left: 0px;
-}
-
-.sidebar-link:hover {
-    text-decoration: none;
-}
-
-/* sidebar nav start */
-.sidebar-link {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    letter-spacing: 1px;
-}
-
-#sidebar ul {
-    position: relative;
-    margin-top: 50px;
-}
-
-#sidebar ul li {
-    list-style: none;
-    display: inline-block;
-    width: 100%;
-    padding: 10px 40px;
-    cursor: pointer;
-}
-
-.contact-info-sidebar {
-    position: absolute;
-    top: 300px;
-    margin-left: 10px;
-}
-
-/* ============ sliding nav menu END ================ */
-
 .center-line {
     display: flex;
     justify-content: center;
@@ -328,20 +234,6 @@
 }
 
 /* =======project section end ============= */
-
-/* =============contact section Start */
-.contact-section {
-    color: #fff;
-    margin: 20px;
-    border-top: 15px solid rgb(255, 118, 38);
-    background-color: rgb(66, 66, 66);
-}
-
-.contact-h2 {
-    text-align: center;
-}
-
-/* ==========contact section END */
 
 /* ============ images gallery Start =========== */
 .gallery_h1 {

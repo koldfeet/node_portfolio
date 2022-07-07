@@ -1,28 +1,3 @@
-// ======= sliding nav menu start ==========
-
-//might have to delete line below
-// const { response } = require("express");
-
-//hamburger menu toggle start
-const toggle = document.getElementById("toggle");
-const sidebar = document.getElementById("sidebar");
-
-document.onclick = function (e) {
-    // @ts-ignore
-    if (e.target.id !== "sidebar" && e.target.id !== "toggle") {
-        toggle.classList.remove("active");
-        sidebar.classList.remove("active")
-    }
-}
-
-toggle.onclick = function () {
-    toggle.classList.toggle("active");
-    sidebar.classList.toggle("active")
-}
-//hamburger menu toggle end
-// ======= sliding nav menu end ==========
-
-
 // ===========gallery section start===============
 var fullImgBox = document.getElementById("fullImgBox");
 var fullImg = document.getElementById("fullImg");
