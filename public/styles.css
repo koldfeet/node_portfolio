@@ -440,3 +440,34 @@ td {
 }
 
 /* ============== CONTACT SECTION END =========== */
+
+/* ============== Footer Start ================= */
+
+/* footer/copyright section StART */
+.copyrightSection {
+    background-color: rgb(255, 118, 38);
+    color: #fff;
+    padding: 30px 5px;
+    margin-top: 15px;
+}
+
+.copyrightSection p {
+    margin: 0;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-nav>p {
+    margin: 5px;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* footer/copyright section end */
+/* ============== Footer End ================= */
