@@ -6,6 +6,7 @@ router.get("/", userController.home)
 router.get("/gallery", userController.gallery)
 router.get("/projects", userController.projects)
 
+//contact page
 //create, find, update, delete
 router.get("/contact", userController.view)
 router.post("/contact", userController.find)
@@ -16,5 +17,7 @@ router.post("/edit-info/:id", userController.update)
 router.get("/view-info/:id", userController.viewAll)
 router.get("/contact/:id", userController.delete)
 
+//testing nodemailer
+router.post("/send", userController.send)
 
 module.exports = router

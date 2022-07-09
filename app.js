@@ -3,6 +3,7 @@ const mysql = require("mysql")
 const bodyParser = require("body-parser")
 const exphbs = require("express-handlebars")
 const dotenv = require("dotenv")
+const nodemailer = require("nodemailer")
 
 require('dotenv').config()
 const app = express()
@@ -11,14 +12,13 @@ const PORT = process.env.PORT || 5000
 //parsing middleware
 //parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
-
 //parse application/json
 app.use(bodyParser.json())
 
 //static files
 app.use(express.static("public"))
 
-//templating engine
+//templating engine handlebars to .hbs
 app.engine("hbs", exphbs.engine({ extname: ".hbs" }))
 app.set("view engine", "hbs")
 
