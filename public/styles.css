@@ -457,7 +457,7 @@ td {
 
 .footer-nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .footer-nav>p {
