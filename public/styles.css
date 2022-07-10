@@ -242,20 +242,35 @@
 /* =======project section end ============= */
 
 /* ============ images gallery Start =========== */
+.gallery_h1_wrapper {
+    text-align: center;
+}
+
 .gallery_h1 {
     color: rgb(255, 118, 38);
 }
 
-.gallery {
-    /* margin: 50px; */
-    /* border-top: 15px solid rgb(255, 118, 38); */
-    text-align: center;
-    padding: 20px;
+/* .gallery_h1 {
+    color:#fff;
+} */
+
+.gallery_img {
+    width: 200px;
+    height: 250px;
+    box-shadow: 5px 5px 15px rgb(58, 58, 58);
 }
 
+.gallery {
+    margin-top: 45px;
+}
+
+/* .gallery_container {
+    background-color: rgba(163, 135, 97, 0.137);
+} */
+
 .img-gallery {
-    width: 80%;
-    margin: 20px auto 50px;
+    width: 85%;
+    margin: 45px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 30px;
@@ -264,14 +279,13 @@
 .img-gallery img {
     width: 100%;
     cursor: pointer;
-    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
-    transition: transform .2s;
 }
 
 .img-gallery img:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
-
+    /* transform: scale(0.8) rotate(-9deg); */
+    transform: scale(1.050);
+    /* border-radius: 20px; */
+    box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
 }
 
 .full-img {
