@@ -30,7 +30,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">#</th>
+            {{!-- <th scope="col">#</th> --}}
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">Email</th>
@@ -57,22 +57,20 @@
     </tbody>
 </table>
 
-<hr>
-
 <div class="container">
-    <h1 class="brand"><span>Acme</span>Contact Form</h1>
+    <div class="form-h1">
+        <h1 class="brand">Contact Form</h1>
+    </div>
     <div class="wrapper animated bounceInLeft">
         <div class="company-info">
-            <h3>Acme Web Design</h3>
-            <ul>
-                <li><i class="fa fa-road"></i> 44 Something st</li>
-                <li><i class="fa fa-phone"></i> (555) 555-5555</li>
-                <li><i class="fa fa-envelope"></i> test@acme.test</li>
-            </ul>
+            <h3>Email Me!</h3>
+            <p>
+                This form will sent me a direct private email.
+            </p>
         </div>
         <div class="contact">
-            <h3>Email Us</h3>
-            {{msg}}
+            <h3 class="sent-msg">{{msg}}</h3>
+
             <form method="POST" action="send">
                 <p>
                     <label>Name</label>

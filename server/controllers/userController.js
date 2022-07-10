@@ -54,7 +54,7 @@ exports.send = (req, res) => {
         }
         console.log("Message sent: %s", info.messageId);
         console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-        res.render("contact.hbs", { msg: "Email has been sent" })
+        res.render("contact.hbs", { msg: "Email has been sent!" })
     })
 
 }
