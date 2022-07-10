@@ -250,10 +250,6 @@
     color: rgb(255, 118, 38);
 }
 
-/* .gallery_h1 {
-    color:#fff;
-} */
-
 .gallery_img {
     width: 200px;
     height: 250px;
@@ -263,10 +259,6 @@
 .gallery {
     margin-top: 45px;
 }
-
-/* .gallery_container {
-    background-color: rgba(163, 135, 97, 0.137);
-} */
 
 .img-gallery {
     width: 85%;
@@ -282,9 +274,7 @@
 }
 
 .img-gallery img:hover {
-    /* transform: scale(0.8) rotate(-9deg); */
     transform: scale(1.050);
-    /* border-radius: 20px; */
     box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
 }
 
@@ -333,6 +323,8 @@
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+    box-shadow: 5px 5px 15px rgb(58, 58, 58);
+    border-radius: 15px;
 }
 
 .card__inner.is-flipped {
@@ -460,7 +452,7 @@ td {
 }
 
 .contact-intro {
-    margin-top: 15px;
+    margin-top: 35px;
 }
 
 /* ============== CONTACT SECTION END =========== */
@@ -528,7 +520,7 @@ ul {
 } */
 
 .wrapper {
-    box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+    box-shadow: 5px 5px 15px rgb(58, 58, 58);
 }
 
 .wrapper>* {
