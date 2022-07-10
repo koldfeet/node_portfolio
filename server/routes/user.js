@@ -17,7 +17,7 @@ router.post("/edit-info/:id", userController.update)
 router.get("/view-info/:id", userController.viewAll)
 router.get("/contact/:id", userController.delete)
 
-//testing nodemailer
+//nodemailer
 router.post("/send", userController.send)
 
 module.exports = router

@@ -85,14 +85,12 @@ exports.view = (req, res) => {
         connection.query("SELECT * FROM client_management.client", (err, rows) => {
             // when done with the connection, release it
             connection.release()
-
             if (!err) {
                 let removedUser = req.query.removed
                 res.render("contact.hbs", { rows, removedUser })
             } else {
                 console.log(err)
             }
-
             // console.log("The data from user table: \n", rows)
         })
     })

@@ -11,6 +11,12 @@
     --light: #f3f3f3;
 }
 
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
 .about-me {
     margin-top: 10px;
 }
@@ -437,6 +443,10 @@ td {
 
 .contact-nav-a {
     margin-right: 20px;
+}
+
+.contact-intro {
+    margin-top: 15px;
 }
 
 /* ============== CONTACT SECTION END =========== */
