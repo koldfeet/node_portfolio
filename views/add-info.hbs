@@ -13,27 +13,29 @@
 </div>
 {{/if}}
 
-<form class="row g-3 needs-validation" method="POST" action="/add-info" novalidate>
+<form class="row g-3 needs-validation" method="POST" action="/add-info">
 
     <div class="col-6">
         <div class="mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="First Name" name="first_name">
+            <input type="text" class="form-control" id="floatingInput" placeholder="First Name" name="first_name"
+                required>
         </div>
     </div>
     <div class="col-6">
         <div class="mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Last Name" name="last_name">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Last Name" name="last_name"
+                required>
         </div>
     </div>
     <div class="col-12">
         <div class="mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="Email" name="email">
+            <input type="email" class="form-control" id="floatingInput" placeholder="Email" name="email" required>
         </div>
     </div>
     <div class="col-12">
         <div class="mb-3">
             <textarea class="form-control" placeholder="Leave a comment here" id="comments" name="comments"
-                style="height: 100px"></textarea>
+                style="height: 100px" required></textarea>
         </div>
     </div>
     <div class="col-12 d-grid">
