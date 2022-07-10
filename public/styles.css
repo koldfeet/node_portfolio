@@ -576,9 +576,7 @@ ul {
 
 /* ====== contact page contact form nodemailer END ======= */
 
-
-
-
+/* ====== contact page data table START =========== */
 
 .table {
     width: 100%;
@@ -622,8 +620,7 @@ ul {
     }
 
     .table td {
-        text-align: right;
-        padding-left: 50%;
+        text-align: center;
         position: relative;
     }
 
@@ -640,3 +637,4 @@ ul {
 }
 
 /* responsive media query table END */
+/* ====== contact page data table END =========== */
