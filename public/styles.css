@@ -421,6 +421,10 @@
 /* ============ project cards end =========== */
 
 /* ============== CONTACT SECTION START =========== */
+.alert-style {
+    margin-top: 35px;
+}
+
 main {
     width: 50%;
     margin: 50px auto;
@@ -454,39 +458,6 @@ td {
 .contact-intro {
     margin-top: 35px;
 }
-
-/* ============== CONTACT SECTION END =========== */
-
-/* ============== Footer Start ================= */
-
-/* footer/copyright section StART */
-.copyrightSection {
-    background-color: rgb(255, 118, 38);
-    color: #fff;
-    padding: 30px 5px;
-    margin-top: 15px;
-}
-
-.copyrightSection p {
-    margin: 0;
-}
-
-.footer-nav {
-    display: flex;
-    justify-content: center;
-}
-
-.footer-nav>p {
-    margin: 5px;
-}
-
-.footer-copyright {
-    text-align: center;
-    margin-top: 15px;
-}
-
-/* footer/copyright section end */
-/* ============== Footer End ================= */
 
 /* ====== contact page contact form nodemailer START ======= */
 .container {
@@ -668,3 +639,36 @@ ul {
 
 /* responsive media query table END */
 /* ====== contact page data table END =========== */
+
+/* ============== CONTACT SECTION END =========== */
+
+/* ============== Footer Start ================= */
+
+/* footer/copyright section StART */
+.copyrightSection {
+    background-color: rgb(255, 118, 38);
+    color: #fff;
+    padding: 30px 5px;
+    margin-top: 15px;
+}
+
+.copyrightSection p {
+    margin: 0;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav>p {
+    margin: 5px;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* footer/copyright section end */
+/* ============== Footer End ================= */
