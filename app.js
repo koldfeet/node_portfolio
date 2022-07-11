@@ -50,7 +50,7 @@ pool.getConnection((err, connection) => {
 const routes = require("./server/routes/user")
 app.use("/", routes)
 
-app.listen(PORT, (err) => {
+app.listen(process.env.PORT || 5000, (err) => {
     if (err) throw err
     console.log(`Server is listenning on PORT: ${PORT}`)
 })
