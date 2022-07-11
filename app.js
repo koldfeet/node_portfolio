@@ -22,13 +22,22 @@ app.use(express.static("public"))
 app.engine("hbs", exphbs.engine({ extname: ".hbs" }))
 app.set("view engine", "hbs")
 
-//connection to db pool
+// //connection to db pool
+// const pool = mysql.createPool({
+//     connectionLimit: 100,
+//     host: process.env.DB_HOST,
+//     user: process.env.DB_USER,
+//     password: process.env.DB_PASS,
+//     database: process.env.DB_NAME
+// })
+
+//connection to clearDB on HEROKU
 const pool = mysql.createPool({
     connectionLimit: 100,
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME
+    host: process.env.HEROKU_HOST,
+    user: process.env.HEROKU_USER,
+    password: process.env.HEROKU_PASSWORD,
+    database: process.env.HEROKU_DATABASE
 })
 
 // connect to db

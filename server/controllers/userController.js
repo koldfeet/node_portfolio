@@ -3,13 +3,22 @@ const nodemailer = require("nodemailer")
 const dotenv = require("dotenv")
 require('dotenv').config()
 
-//connection to db pool
+// //connection to db pool
+// const pool = mysql.createPool({
+//     connectionLimit: 100,
+//     host: process.env.DB_HOST,
+//     user: process.env.DB_USER,
+//     password: process.env.DB_PASS,
+//     database: process.env.DB_NAME
+// })
+
+//connection to clearDB on HEROKU
 const pool = mysql.createPool({
     connectionLimit: 100,
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME
+    host: process.env.HEROKU_HOST,
+    user: process.env.HEROKU_USER,
+    password: process.env.HEROKU_PASSWORD,
+    database: process.env.HEROKU_DATABASE
 })
 
 //contact page nodemailer form 
@@ -82,7 +91,7 @@ exports.view = (req, res) => {
         if (err) throw err
         console.log("Connected as ID " + connection.threadId)
         // user connection
-        connection.query("SELECT * FROM client_management.client", (err, rows) => {
+        connection.query("SELECT * FROM heroku_2493ce39803a471.client", (err, rows) => {
             // when done with the connection, release it
             connection.release()
             if (!err) {
@@ -105,7 +114,7 @@ exports.find = (req, res) => {
         let searchTerm = req.body.search
 
         // user connection
-        connection.query("SELECT * FROM client_management.client WHERE first_name LIKE ? OR last_name LIKE ? OR email LIKE ?", ["%" + searchTerm + "%", "%" + searchTerm + "%", "%" + searchTerm + "%"], (err, rows) => {
+        connection.query("SELECT * FROM heroku_2493ce39803a471.client WHERE first_name LIKE ? OR last_name LIKE ? OR email LIKE ?", ["%" + searchTerm + "%", "%" + searchTerm + "%", "%" + searchTerm + "%"], (err, rows) => {
             // when done with the connection, release it
             connection.release()
 
@@ -160,7 +169,7 @@ exports.edit = (req, res) => {
         console.log("Connected as ID " + connection.threadId)
         // user connection
 
-        connection.query("SELECT * FROM client_management.client WHERE id = ?", [req.params.id], (err, rows) => {
+        connection.query("SELECT * FROM heroku_2493ce39803a471.client WHERE id = ?", [req.params.id], (err, rows) => {
             // when done with the connection, release it
             connection.release()
 
@@ -184,7 +193,7 @@ exports.update = (req, res) => {
         console.log("Connected as ID " + connection.threadId)
         // user connection
 
-        connection.query("UPDATE client_management.client SET first_name = ?, last_name = ?, email = ?, comments = ? WHERE id = ?", [first_name, last_name, email, comments, req.params.id], (err, rows) => {
+        connection.query("UPDATE heroku_2493ce39803a471.client SET first_name = ?, last_name = ?, email = ?, comments = ? WHERE id = ?", [first_name, last_name, email, comments, req.params.id], (err, rows) => {
             // when done with the connection, release it
             connection.release()
 
@@ -195,7 +204,7 @@ exports.update = (req, res) => {
                     console.log("Connected as ID " + connection.threadId)
                     // user connection
 
-                    connection.query("SELECT * FROM client_management.client WHERE id = ?", [req.params.id], (err, rows) => {
+                    connection.query("SELECT * FROM heroku_2493ce39803a471.client WHERE id = ?", [req.params.id], (err, rows) => {
                         // when done with the connection, release it
                         connection.release()
 
@@ -226,7 +235,7 @@ exports.delete = (req, res) => {
         console.log("Connected as ID " + connection.threadId)
         // user connection
 
-        connection.query("DELETE FROM client_management.client WHERE id = ?", [req.params.id], (err, rows) => {
+        connection.query("DELETE FROM heroku_2493ce39803a471.client WHERE id = ?", [req.params.id], (err, rows) => {
             // when done with the connection, release it
             connection.release()
 
@@ -249,7 +258,7 @@ exports.viewAll = (req, res) => {
         if (err) throw err
         console.log("Connected as ID " + connection.threadId)
         // user connection
-        connection.query("SELECT * FROM client_management.client WHERE id = ?", [req.params.id], (err, rows) => {
+        connection.query("SELECT * FROM heroku_2493ce39803a471.client WHERE id = ?", [req.params.id], (err, rows) => {
             // when done with the connection, release it
             connection.release()
 
