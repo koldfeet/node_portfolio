@@ -50,7 +50,7 @@ exports.send = (req, res) => {
 
     // send mail with defined transport object
     let mailOptions = {
-        from: '"Nodemailer Contact" <process.env.MAILER_EMAIL>', // sender address
+        from: '"Nodemailer Contact" <chris.tr88@outlook.com>', // sender address
         to: process.env.MAILER_EMAIL, // list of receivers
         subject: "Node Contact Request", // Subject line
         text: "Hello world?", // plain text body
