@@ -41,13 +41,8 @@ const pool = mysql.createPool({
 })
 
 // connect to db
-// pool.getConnection((err, connection) => {
-//     if (err) throw err
-//     console.log("Connected as ID " + connection.threadId)
-// })
-
 pool.getConnection((err, connection) => {
-
+    if (err) throw err
     console.log("Connected as ID " + connection.threadId)
 })
 
