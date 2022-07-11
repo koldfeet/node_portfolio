@@ -43,8 +43,16 @@
     padding: 20px;
 }
 
+.profile-img-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .profile-img-style {
     text-align: center;
+    width: 250px;
+    height: 250px;
 }
 
 .profile-img {
@@ -256,7 +264,7 @@
 }
 
 .gallery {
-    margin: 45px;
+    margin-top: 45px;
 }
 
 .img-gallery {
