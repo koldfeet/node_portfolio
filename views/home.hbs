@@ -2,9 +2,25 @@
     <div class="container">
         <div class="row">
             <div class="col col-left">
-                <div class="profile-img-style">
-                    <img class="profile-img" src="https://source.unsplash.com/400x400?mountain">
-                </div>
+                {{!-- home page profile img start --}}
+                <section id="target_gallery" class="gallery">
+                    <div class="container gallery_container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="full-img" id="fullImgBox">
+                                    <img src="images/placement.jpg" id="fullImg">
+                                    <span onclick="closeFullImg()">X</span>
+                                </div>
+                                <div class=" profile-img-style">
+                                    <img class="gallery_img profile-img"
+                                        src="https://source.unsplash.com/400x400?mountain"
+                                        onclick="openFullImg(this.src)" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {{!-- home page profile img end --}}
 
                 <hr>
                 <div class="h1-style">
