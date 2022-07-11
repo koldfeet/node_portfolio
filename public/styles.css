@@ -217,6 +217,7 @@
 
 .btn {
     background-color: rgb(255, 118, 38);
+    color: #fff;
     border: none;
     margin: 10px;
     padding-left: 20px;
@@ -225,6 +226,7 @@
 
 .btn:hover {
     background-color: rgb(66, 66, 66);
+    color: rgb(255, 118, 38);
 }
 
 .btn-live {
@@ -552,7 +554,7 @@ ul {
 
 .contact form button:hover,
 .contact form button:focus {
-    background: gray;
+    background: rgb(66, 66, 66);
     color: rgb(255, 118, 38);
     outline: 0;
     /* transition: background-color 2s ease-out; */
