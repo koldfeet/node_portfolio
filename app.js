@@ -31,7 +31,7 @@ app.set("view engine", "hbs")
 //     database: process.env.DB_NAME
 // })
 
-//connection to clearDB on HEROKU
+////connection to clearDB on HEROKU
 const pool = mysql.createPool({
     connectionLimit: 100,
     host: process.env.HEROKU_HOST,
