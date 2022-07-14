@@ -19,4 +19,11 @@ for (let i = 0; i < cards.length; i++) {
         cards[i].classList.toggle('is-flipped');
     });
 }
+
+// ==== project card portfolio live link alert start ====
+const alert_btn = document.getElementById("alert_btn")
+alert_btn.addEventListener("click", () => {
+    alert("This website has already been open.")
+})
+// ==== project card portfolio live link alert END ====
 // ======= project section cards end ========

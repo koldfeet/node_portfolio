@@ -60,6 +60,7 @@
 }
 
 .h1-style {
+    margin-top: 35px;
     text-align: center;
     color: #fff;
     letter-spacing: 2px;
@@ -258,7 +259,7 @@
 
 .gallery_img {
     width: 250px;
-    height: 250px;
+    height: 280px;
     box-shadow: 5px 5px 15px rgb(58, 58, 58);
 }
 
