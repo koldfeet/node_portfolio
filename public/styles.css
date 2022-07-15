@@ -57,6 +57,7 @@
 .profile-img {
     border-radius: 5px;
     cursor: pointer;
+    object-fit: cover;
 }
 
 .h1-style {
