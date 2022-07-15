@@ -1,48 +1,51 @@
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/contact">Contact</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Edit Infomation</li>
-    </ol>
-</nav>
+<section class="edit-section">
 
-{{!-- show info had been submitted --}}
-{{#if alert}}
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-    {{alert}}
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-{{/if}}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/contact">Contact</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit Infomation</li>
+        </ol>
+    </nav>
 
-{{#each rows}}
-<form class="row g-3 needs-validation" method="POST" action="/edit-info/{{this.id}}" novalidate>
+    {{!-- show info had been submitted --}}
+    {{#if alert}}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{alert}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
 
-    <div class="col-6">
-        <div class="mb-3">
-            <input type="text" class="form-control" value="{{this.first_name}}" id="floatingInput"
-                placeholder="First Name" name="first_name">
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="mb-3">
-            <input type="text" class="form-control" value="{{this.last_name}}" id=" floatingInput"
-                placeholder="Last Name" name="last_name">
-        </div>
-    </div>
-    <div class="col-12">
-        <div class="mb-3">
-            <input type="email" class="form-control" value="{{this.email}}" id=" floatingInput" placeholder="Email"
-                name="email">
-        </div>
-    </div>
-    <div class="col-12">
-        <div class="mb-3">
-            <textarea class="form-control" placeholder="Leave a comment here" id="comments" name="comments"
-                style="height: 100px">{{this.comments}}</textarea>
-        </div>
-    </div>
-    <div class="col-12 d-grid">
-        <button class="btn btn-primary" type="submit">Submit</button>
-    </div>
+    {{#each rows}}
+    <form class="row g-3 needs-validation" method="POST" action="/edit-info/{{this.id}}" novalidate>
 
-</form>
-{{/each}}
+        <div class="col-6">
+            <div class="mb-3">
+                <input type="text" class="form-control" value="{{this.first_name}}" id="floatingInput"
+                    placeholder="First Name" name="first_name">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="mb-3">
+                <input type="text" class="form-control" value="{{this.last_name}}" id=" floatingInput"
+                    placeholder="Last Name" name="last_name">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="mb-3">
+                <input type="email" class="form-control" value="{{this.email}}" id=" floatingInput" placeholder="Email"
+                    name="email">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="mb-3">
+                <textarea class="form-control" placeholder="Leave a comment here" id="comments" name="comments"
+                    style="height: 100px">{{this.comments}}</textarea>
+            </div>
+        </div>
+        <div class="col-12 d-grid">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+
+    </form>
+    {{/each}}
+</section>

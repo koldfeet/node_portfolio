@@ -676,3 +676,19 @@ ul {
 
 /* footer/copyright section end */
 /* ============== Footer End ================= */
+
+/* ============ view info css start ========== */
+
+.view-section {
+    margin-top: 35px;
+}
+
+/* ============ view info css end ========== */
+
+/* ============ edit info css Start ======== */
+
+.edit-section {
+    margin-top: 35px;
+}
+
+/* ============ edit info css End ======== */
