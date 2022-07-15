@@ -443,12 +443,12 @@ table {
     margin: 50px auto;
 }
 
-table,
+/* table,
 th,
 td {
     border-collapse: collapse;
     border: 1px solid #000;
-}
+} */
 
 th,
 td {
@@ -466,6 +466,68 @@ td {
 .contact-intro {
     margin-top: 35px;
 }
+
+/* ====== contact page data table START =========== */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td,
+.table th {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* .table th {
+    background-color: darkblue;
+    color: #ffffff;
+} */
+
+.table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+/* responsive media query table Start */
+@media(max-width: 500px) {
+    .table thead {
+        display: none;
+    }
+
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+    }
+
+    .table td {
+        text-align: center;
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* responsive media query table END */
+/* ====== contact page data table END =========== */
 
 /* ====== contact page contact form nodemailer START ======= */
 .container {
@@ -581,68 +643,6 @@ ul {
 }
 
 /* ====== contact page contact form nodemailer END ======= */
-
-/* ====== contact page data table START =========== */
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.table td,
-.table th {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    text-align: center;
-    font-size: 16px;
-}
-
-/* .table th {
-    background-color: darkblue;
-    color: #ffffff;
-} */
-
-.table tbody tr:nth-child(even) {
-    background-color: #f5f5f5;
-}
-
-/* responsive media query table Start */
-@media(max-width: 500px) {
-    .table thead {
-        display: none;
-    }
-
-    .table,
-    .table tbody,
-    .table tr,
-    .table td {
-        display: block;
-        width: 100%;
-    }
-
-    .table tr {
-        margin-bottom: 15px;
-    }
-
-    .table td {
-        text-align: center;
-        position: relative;
-    }
-
-    .table td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 50%;
-        padding-left: 15px;
-        font-size: 15px;
-        font-weight: bold;
-        text-align: left;
-    }
-}
-
-/* responsive media query table END */
-/* ====== contact page data table END =========== */
 
 /* ============== CONTACT SECTION END =========== */
 
